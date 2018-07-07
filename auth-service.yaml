@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservices-auth-service
+  labels:
+    name: microservices-auth-service
+    app: flipshop
+spec:
+  selector:
+    name: microservices-auth-service 
+  type: NodePort
+  ports:
+   - name: http
+     port: 5000
+     targetPort: 5000
+     protocol: TCP
